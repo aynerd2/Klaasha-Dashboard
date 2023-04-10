@@ -287,12 +287,7 @@ export const themeColors = [
 
 
 export const earningData = [
-  {
-    
-    amount: '4,396',
-    duration: 'Products',
-    date: '24 Aug - 01 Sep 21'
-  },
+
   {
   
     amount: '₦1,652.50',
