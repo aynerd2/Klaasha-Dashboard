@@ -295,6 +295,12 @@ export const earningData = [
     date: '24 Aug - 01 Sep 21'
   },
   {
+  
+    amount: '₦1,652.50',
+    duration: 'This week',
+    date: '24 Aug - 01 Sep 21'
+  },
+  {
     amount: '₦1,652.50',
     duration: 'This month',
     date: '24 Aug - 01 Sep 21'
@@ -305,6 +311,28 @@ export const earningData = [
     date: '24 Aug - 01 Sep 21'
   },
 ];
+
+
+export const LinePrimaryXAxis = {
+  valueType: 'DateTime',
+  labelFormat: 'y',
+  intervalType: 'Years',
+  edgeLabelPlacement: 'Shift',
+  majorGridLines: { width: 0 },
+  background: 'white',
+};
+
+export const LinePrimaryYAxis = {
+  labelFormat: '{value}%',
+  rangePadding: 'None',
+  minimum: 0,
+  maximum: 100,
+  interval: 20,
+  lineStyle: { width: 0 },
+  majorTickLines: { width: 0 },
+  minorTickLines: { width: 0 },
+};
+
 
 
 
