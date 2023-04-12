@@ -7,19 +7,14 @@ import {SlPieChart} from 'react-icons/sl'
 import {MdOutlineShoppingCartCheckout} from 'react-icons/md'
 import {RiLinksFill} from 'react-icons/ri'
 import {GrTransaction} from 'react-icons/gr'
-
-import { BiColorFill } from 'react-icons/bi';
-import { IoMdContacts } from 'react-icons/io';
-import { RiContactsLine, RiStockLine } from 'react-icons/ri';
-import { MdOutlineSupervisorAccount } from 'react-icons/md';
-import { HiOutlineRefresh } from 'react-icons/hi';
-import { TiTick } from 'react-icons/ti';
-import { GiLouvrePyramid } from 'react-icons/gi';
-import { GrLocation } from 'react-icons/gr';
+import {  FiCreditCard } from 'react-icons/fi';
+import { BsCurrencyDollar, BsShield } from 'react-icons/bs';
+import avatar from './avatar.jpg';
+import avatar2 from './avatar2.jpg';
+import avatar3 from './avatar3.png';
+import avatar4 from './avatar4.jpg';
 
 
-import { BsBoxSeam } from 'react-icons/bs';
-import { FiBarChart} from 'react-icons/fi';
 
 export const gridOrderImage = (props) => (
   <div>
@@ -32,15 +27,9 @@ export const gridOrderImage = (props) => (
 );
 
 
-export const gridOrderStatus = (props) => (
-  <button
-    type="button"
-    style={{ background: props.StatusBg }}
-    className="text-white py-1 px-2 capitalize rounded-2xl text-md"
-  >
-    {props.Status}
-  </button>
-);
+
+
+
 
 
 export const kanbanGrid = [
@@ -122,7 +111,6 @@ export const links = [
     ],
   },
 ];
-
 
 
 export const employeesGrid = [
@@ -272,8 +260,8 @@ export const themeColors = [
     color: '#7352FF',
   },
   {
-    name: 'red-theme',
-    color: '#FF5C8E',
+    name: 'Klasha-default',
+    color: '#EF2C5A',
   },
   {
     name: 'indigo-theme',
@@ -288,12 +276,7 @@ export const themeColors = [
 
 export const earningData = [
 
-  {
-  
-    amount: '₦1,652.50',
-    duration: 'This week',
-    date: '24 Aug - 01 Sep 21'
-  },
+ 
   {
   
     amount: '₦1,652.50',
@@ -334,5 +317,57 @@ export const LinePrimaryYAxis = {
 };
 
 
+export const userProfileData = [
+  {
+    icon: <BsCurrencyDollar />,
+    title: 'My Profile',
+    desc: 'Account Settings',
+    iconColor: '#03C9D7',
+    iconBg: '#E5FAFB',
+  },
+  {
+    icon: <BsShield />,
+    title: 'My Inbox',
+    desc: 'Messages & Emails',
+    iconColor: 'rgb(0, 194, 146)',
+    iconBg: 'rgb(235, 250, 242)',
+  },
+  {
+    icon: <FiCreditCard />,
+    title: 'My Tasks',
+    desc: 'To-do and Daily Tasks',
+    iconColor: 'rgb(255, 244, 229)',
+    iconBg: 'rgb(254, 201, 15)',
+  },
+];
 
-
+export const chatData = [
+  {
+    image:
+      avatar2,
+    message: 'Roman Joined the Team!',
+    desc: 'Congratulate him',
+    time: '9:08 AM',
+  },
+  {
+    image:
+      avatar3,
+    message: 'New message received',
+    desc: 'Salma sent you new message',
+    time: '11:56 AM',
+  },
+  {
+    image:
+      avatar4,
+    message: 'New Payment received',
+    desc: 'Check your earnings',
+    time: '4:39 AM',
+  },
+  {
+    image:
+      avatar,
+    message: 'Jolly completed tasks',
+    desc: 'Assign her new tasks',
+    time: '1:12 AM',
+  },
+];

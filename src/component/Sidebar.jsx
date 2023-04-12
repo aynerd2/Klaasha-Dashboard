@@ -4,6 +4,8 @@ import { MdOutlineCancel } from 'react-icons/md'
 import { TooltipComponent } from '@syncfusion/ej2-react-popups'
 import { links } from '../data/dummy'
 import { useStateContext } from '../context/ContextProvider'
+import {BiHelpCircle} from 'react-icons/bi'
+import {AiOutlineLeft} from 'react-icons/ai'
 
 
 
@@ -31,14 +33,16 @@ const Sidebar = () => {
       {
 
         activeMenu && (<>
+
           <div className='flex justify-between items-center'>
             <Link to='/' onClick={handleCloseSideBar} className='items-center gap-3 ml-3 mt-4 flex'>
               <img src='https://klasha.com/_next/static/media/logo-black.681f8ca0.svg' />
             </Link>
+
             <TooltipComponent content="Menu" position='BottomCenter'>
 
-              <button type='button'onClick={() => setActiveMenu(!activeMenu)}
-              style={{ color: currentColor }}
+              <button type='button' onClick={() => setActiveMenu(!activeMenu)}
+                style={{ color: currentColor }}
                 className='text-xl  rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden'
               >
                 <MdOutlineCancel />
@@ -52,36 +56,62 @@ const Sidebar = () => {
 
               <div key={items.title}>
                 <p className='text-gray-400 m-3 mt-4'>{items.title}</p>
+
                 {items.links.map((link) => (
-                 <NavLink
-                 to={`/${link.name}`}
-                 key={link.name}
-                 onClick={handleCloseSideBar}
-                 style={({ isActive }) => ({
-                   backgroundColor: isActive ? currentColor : '',
-                 })}
-                 className={({ isActive }) => (isActive ? activeLink : normalLink)}
-               >
-                 {link.icon}
-                 <span className="capitalize ">{link.name}</span>
-               </NavLink>
+                  <NavLink
+                    to={`/${link.name}`}
+                    key={link.name}
+                    onClick={handleCloseSideBar}
+                    style={({ isActive }) => ({
+                      backgroundColor: isActive ? currentColor : '',
+                    })}
+                    className={({ isActive }) => (isActive ? activeLink : normalLink)}
+                  >
+                    {link.icon}
+                    <span className="capitalize font-body">{link.name}</span>
+                  </NavLink>
                 ))}
+
               </div>
+
+
+
             ))}
 
-          </div>
-
-          <div className='flex-col justify-between items-center'>
-
-          
 
           </div>
+
+
+
+
 
 
         </>)
 
 
       }
+
+
+
+      <div className='flex-col ml-3 mt-20 justify-between items-center'>
+        <div>
+          <button class="bg-rose-500 hover:bg-rose-400 text-white font-bold py-2 px-4 gap-2 mb-5 rounded-full inline-flex items-center">
+           <BiHelpCircle style={{ fontSize: '1.5em' }}/>
+            <span className='font-body font-semibold'>Support</span>
+          </button>
+        </div>
+
+        
+        <div>
+          <button 
+          class="bg-gray-100 hover:bg-gray-100 text-black font-bold py-2 px-4 gap-2 rounded inline-flex items-center border border-gray-500"
+          onClick={() => setActiveMenu(!activeMenu)}>
+           <AiOutlineLeft style={{ fontSize: '1.5em' }}/>
+            <span className='font-body font-semibold'>Hide Panel</span>
+          </button>
+        </div>
+      </div>
+
 
     </div>
   )
