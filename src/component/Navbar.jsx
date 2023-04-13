@@ -19,6 +19,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
       onClick={() => customFunc()}
       style={{ color }}
       className="relative text-xl rounded-full p-3 hover:bg-light-gray"
+      
     >
       <span
         style={{ background: dotColor }}
@@ -68,6 +69,7 @@ const Navbar = () => {
 
       <NavButton
         title="Menu"
+        className="dark:text-white"
         customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
         icon={<AiOutlineMenu />} />
 

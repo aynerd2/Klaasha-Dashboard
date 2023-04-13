@@ -16,41 +16,6 @@ import avatar4 from './avatar4.jpg';
 
 
 
-export const gridOrderImage = (props) => (
-  <div>
-    <img
-      className="rounded-xl h-20 md:ml-3"
-      src={props.ProductImage}
-      alt="order-item"
-    />
-  </div>
-);
-
-
-
-
-
-
-
-export const kanbanGrid = [
-  { headerText: 'To Do',
-    keyField: 'Open',
-    allowToggle: true },
-
-  { headerText: 'In Progress',
-    keyField: 'InProgress',
-    allowToggle: true },
-
-  { headerText: 'Testing',
-    keyField: 'Testing',
-    allowToggle: true,
-    isExpanded: false },
-
-  { headerText: 'Done',
-    keyField: 'Close',
-    allowToggle: true },
-];
-
 
 export const links = [
   {
@@ -248,29 +213,30 @@ export const employeesData = [
 
 export const themeColors = [
   {
-    name: 'blue-theme',
-    color: '#1A97F5',
-  },
-  {
-    name: 'green-theme',
-    color: '#03C9D7',
-  },
-  {
-    name: 'purple-theme',
-    color: '#7352FF',
+    name: 'gray-theme',
+    color: '#808080',
   },
   {
     name: 'Klasha-default',
     color: '#EF2C5A',
   },
-  {
-    name: 'indigo-theme',
-    color: '#1E4DB7',
-  },
-  {
-    color: '#FB9678',
-    name: 'orange-theme',
-  },
+  // {
+  //   name: 'green-theme',
+  //   color: '#03C9D7',
+  // },
+  // {
+  //   name: 'purple-theme',
+  //   color: '#7352FF',
+  // },
+ 
+  // {
+  //   name: 'indigo-theme',
+  //   color: '#1E4DB7',
+  // },
+  // {
+  //   color: '#FB9678',
+  //   name: 'orange-theme',
+  // },
 ];
 
 
@@ -294,28 +260,6 @@ export const earningData = [
     date: '24 Aug - 01 Sep 21'
   },
 ];
-
-
-export const LinePrimaryXAxis = {
-  valueType: 'DateTime',
-  labelFormat: 'y',
-  intervalType: 'Years',
-  edgeLabelPlacement: 'Shift',
-  majorGridLines: { width: 0 },
-  background: 'white',
-};
-
-export const LinePrimaryYAxis = {
-  labelFormat: '{value}%',
-  rangePadding: 'None',
-  minimum: 0,
-  maximum: 100,
-  interval: 20,
-  lineStyle: { width: 0 },
-  majorTickLines: { width: 0 },
-  minorTickLines: { width: 0 },
-};
-
 
 export const userProfileData = [
   {
@@ -372,95 +316,3 @@ export const chatData = [
   },
 ];
 
-
-export const areaPrimaryXAxis = {
-  valueType: 'DateTime',
-  labelFormat: 'y',
-  majorGridLines: { width: 0 },
-  intervalType: 'Years',
-  edgeLabelPlacement: 'Shift',
-  labelStyle: { color: 'gray' },
-};
-
-export const areaPrimaryYAxis = {
-  labelFormat: '{value}%',
-  lineStyle: { width: 0 },
-  maximum: 4,
-  interval: 1,
-  majorTickLines: { width: 0 },
-  minorTickLines: { width: 0 },
-  labelStyle: { color: 'gray' },
-
-};
-
-const areaChartData = [
-  [
-    { x: new Date(2002, 0, 1), y: 2.2 },
-    { x: new Date(2003, 0, 1), y: 3.4 },
-    { x: new Date(2004, 0, 1), y: 2.8 },
-    { x: new Date(2005, 0, 1), y: 1.6 },
-    { x: new Date(2006, 0, 1), y: 2.3 },
-    { x: new Date(2007, 0, 1), y: 2.5 },
-    { x: new Date(2008, 0, 1), y: 2.9 },
-    { x: new Date(2009, 0, 1), y: 3.8 },
-    { x: new Date(2010, 0, 1), y: 1.4 },
-    { x: new Date(2011, 0, 1), y: 3.1 },
-  ],
-  [
-    { x: new Date(2002, 0, 1), y: 2 },
-    { x: new Date(2003, 0, 1), y: 1.7 },
-    { x: new Date(2004, 0, 1), y: 1.8 },
-    { x: new Date(2005, 0, 1), y: 2.1 },
-    { x: new Date(2006, 0, 1), y: 2.3 },
-    { x: new Date(2007, 0, 1), y: 1.7 },
-    { x: new Date(2008, 0, 1), y: 1.5 },
-    { x: new Date(2009, 0, 1), y: 2.8 },
-    { x: new Date(2010, 0, 1), y: 1.5 },
-    { x: new Date(2011, 0, 1), y: 2.3 },
-  ],
-  [
-    { x: new Date(2002, 0, 1), y: 0.8 },
-    { x: new Date(2003, 0, 1), y: 1.3 },
-    { x: new Date(2004, 0, 1), y: 1.1 },
-    { x: new Date(2005, 0, 1), y: 1.6 },
-    { x: new Date(2006, 0, 1), y: 2 },
-    { x: new Date(2007, 0, 1), y: 1.7 },
-    { x: new Date(2008, 0, 1), y: 2.3 },
-    { x: new Date(2009, 0, 1), y: 2.7 },
-    { x: new Date(2010, 0, 1), y: 1.1 },
-    { x: new Date(2011, 0, 1), y: 2.3 },
-  ],
-];
-
-
-
-export const areaCustomSeries = [
-  {
-    dataSource: areaChartData[0],
-    xName: 'x',
-    yName: 'y',
-    name: 'USA',
-    opacity: '0.8',
-    type: 'SplineArea',
-    width: '2',
-
-  },
-  {
-    dataSource: areaChartData[1],
-    xName: 'x',
-    yName: 'y',
-    name: 'France',
-    opacity: '0.8',
-    type: 'SplineArea',
-    width: '2',
-  },
-  {
-    dataSource: areaChartData[2],
-    xName: 'x',
-    yName: 'y',
-    name: 'Germany',
-    opacity: '0.8',
-    type: 'SplineArea',
-    width: '2',
-  },
-];

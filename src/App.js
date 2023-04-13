@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-// import { Button, Footer, Navbar, Notifications, Sidebar, ThemeSettings, UserProfile } from './component'
-import { Button, Footer, Navbar, Notifications, Sidebar, ThemeSettings, UserProfile } from './component'
+import { Navbar, Sidebar, ThemeSettings } from './component'
 import { Analytics, Balances, Checkout, Dashboard, Exchange, Marketing, PaymentLinks, Transactions, Wire } from './pages'
 import './App.css'
 import { useStateContext } from './context/ContextProvider';
@@ -58,7 +57,7 @@ const App = () => {
 
                                     className={
                                           `dark:bg-main-dark-bg bg-main-bg min-h-screen w-full
-                        ${activeMenu
+                                     ${activeMenu
 
                                                 ? ' md:ml-72 w-full'
                                                 : 'flex-2'}`}>

@@ -95,7 +95,7 @@ const Sidebar = () => {
 
       <div className='flex-col ml-3 mt-20 justify-between items-center'>
         <div>
-          <button class="bg-rose-500 hover:bg-rose-400 text-white font-bold py-2 px-4 gap-2 mb-5 rounded-full inline-flex items-center">
+          <button className="bg-rose-500 hover:bg-rose-400 text-white font-bold py-2 px-4 gap-2 mb-5 rounded-full inline-flex items-center">
            <BiHelpCircle style={{ fontSize: '1.5em' }}/>
             <span className='font-body font-semibold'>Support</span>
           </button>
@@ -104,7 +104,7 @@ const Sidebar = () => {
         
         <div>
           <button 
-          class="bg-gray-100 hover:bg-gray-100 text-black font-bold py-2 px-4 gap-2 rounded inline-flex items-center border border-gray-500"
+          className="bg-gray-100 hover:bg-gray-100 text-black font-bold py-2 px-4 gap-2 rounded inline-flex items-center border border-gray-500"
           onClick={() => setActiveMenu(!activeMenu)}>
            <AiOutlineLeft style={{ fontSize: '1.5em' }}/>
             <span className='font-body font-semibold'>Hide Panel</span>

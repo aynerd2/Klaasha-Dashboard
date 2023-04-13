@@ -5,4 +5,4 @@ export {default as Footer} from './Footer'
 export {default as Sidebar} from './Sidebar'
 export {default as UserProfile} from './UserProfile'
 export {default as ThemeSettings} from './ThemeSettings'
-export {default as LineChart} from './Chart/LineChart'
+
