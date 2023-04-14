@@ -221,7 +221,7 @@ const Dashboard = () => {
       <div className="flex flex-col md:flex-row justify-center items-center">
 
 
-        <div className="flex flex-col mt-5 md:mr-10 justify-center gap-1 items-center">
+      <div className="flex-col mt-5 md:mr-10 justify-center gap-1 items-center hidden md:flex">
 
           <div class="flex flex-col sm:flex-row justify-between items-center mb-2 sm:mb-0">
             <div class="flex items-center mb-2 sm:mb-0">
@@ -271,10 +271,11 @@ const Dashboard = () => {
               <Area type="monotone" dataKey="uv" stroke="EF2C5A" fill="#EF2C5A" />
             </AreaChart>
           </ResponsiveContainer>
+
         </div>
 
 
-        <div className="flex-col flex-wrap bg-rose-500 dark:text-white dark:bg-rose-500 md:w-48 p-4 rounded mt-5 md:mt-0">
+        <div className="flex-col flex-wrap bg-rose-500 dark:text-white dark:bg-rose-500 md:w-48 p-4 rounded mt-5 md:mt-0 hidden md:flex">
           <p className="text-sm font-body font-bold text-white mt-1">KlashaWire - send money to businesses globally from Africa</p>
           <button className="bg-black text-white font-bold mt-12 p-2 rounded-md inline-flex items-center border border-gray-500">
             <span className="text-xs font-body font-bold">Send a Wire</span>
